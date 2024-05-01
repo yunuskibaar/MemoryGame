@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#0a3c2f;
+
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #0d614b;
+    padding: 40px 60px;
+}
+
+h2{
+    font-size: 3em;
+    color : #fff;
+    letter-spacing: 0.1em;
+}
+
+
+.reset {
+    background-color: #ff6f61; /* Oyunun ana rengiyle uyumlu bir arka plan rengi */
+    color: white; /* Beyaz yazı rengi */
+    border: 2px solid #ff6f61; /* Dış kenar çizgisi */
+    border-radius: 5px; /* Kenar yuvarlama */
+    transition: background-color 0.3s ease; /* Arka plan rengi değişiminde yumuşak bir geçiş */
+    padding: 10px 20px;
+    border: none;
+    font-size:1.5rem;
+    cursor:pointer;
+    font-weight: 600;
+}
+
+.reset:hover {
+    background-color: #d8312d; /* Üzerine gelindiğinde daha koyu bir renk */
+}
+
+.game {
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    transform-style:preserve-3d;
+    perspective: 500px;
+    text-align: center;
+}
+
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    background-color: #fff;
+    transition: .25s;
+    
+    
+}
+
+.item::after{
+    content: " ";
+   position: absolute;
+   inset: 0;
+   background-color: aqua;
+   transition: .25s;
+   opacity: 0.85;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after{
+    transform: rotateY(180deg);
+}
+
