@@ -33,11 +33,11 @@ h2{
 
 
 .reset {
-    background-color: #ff6f61; /* Oyunun ana rengiyle uyumlu bir arka plan rengi */
-    color: white; /* Beyaz yazı rengi */
-    border: 2px solid #ff6f61; /* Dış kenar çizgisi */
-    border-radius: 5px; /* Kenar yuvarlama */
-    transition: background-color 0.3s ease; /* Arka plan rengi değişiminde yumuşak bir geçiş */
+    background-color: #ff6f61; 
+    color: white; 
+    border: 2px solid #ff6f61;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
     padding: 10px 20px;
     border: none;
     font-size:1.5rem;
@@ -46,7 +46,7 @@ h2{
 }
 
 .reset:hover {
-    background-color: #d8312d; /* Üzerine gelindiğinde daha koyu bir renk */
+    background-color: #d8312d; 
 }
 
 .game {
